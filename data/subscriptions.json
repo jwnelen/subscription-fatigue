@@ -13,5 +13,30 @@
         "name": "HBO",
         "std_price": 15.99,
         "img_link": "https://logos-world.net/wp-content/uploads/2022/01/HBO-Max-Logo.png"
+    }, 
+    {
+        "name": "Amazon Prime",
+        "std_price": 12.99,
+        "img_link": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Amazon_Prime_Video_logo.svg/2560px-Amazon_Prime_Video_logo.svg.png"
+    },
+    {
+        "name": "Disney+",
+        "std_price": 7.99,
+        "img_link": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Disney%2B_logo.svg/2560px-Disney%2B_logo.svg.png"
+    },
+    {
+        "name": "Hulu",
+        "std_price": 11.99,
+        "img_link": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Hulu_Logo.svg/2000px-Hulu_Logo.svg.png"
+    },
+    {
+        "name": "Apple TV+",
+        "std_price": 4.99,
+        "img_link": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Apple_TV_Plus_Logo.svg/2560px-Apple_TV_Plus_Logo.svg.png"
+    },
+    {
+        "name": "Swapfiets",
+        "std_price": 18.50,
+        "img_link": "https://d21buns5ku92am.cloudfront.net/69232/images/358201-Swapfiets_logos_RGB_Blue-1c3aa0-large-1593634730.png"
     }
 ]
