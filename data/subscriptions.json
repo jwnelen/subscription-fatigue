@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Netflix",
+        "std_price": 9.99,
+        "img_link": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2000px-Netflix_2015_logo.svg.png"
+    },
+    {
+        "name": "Spotify",
+        "std_price": 9.99,
+        "img_link": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/2000px-Spotify_logo_without_text.svg.png"
+    },
+    {
+        "name": "HBO",
+        "std_price": 15.99,
+        "img_link": "https://logos-world.net/wp-content/uploads/2022/01/HBO-Max-Logo.png"
+    }
+]
