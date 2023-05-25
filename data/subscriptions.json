@@ -7,7 +7,7 @@
     {
         "name": "Spotify",
         "std_price": 9.99,
-        "img_link": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/2000px-Spotify_logo_without_text.svg.png"
+        "img_link": "https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_Green.png"
     },
     {
         "name": "HBO",
@@ -37,6 +37,6 @@
     {
         "name": "Swapfiets",
         "std_price": 18.50,
-        "img_link": "https://d21buns5ku92am.cloudfront.net/69232/images/358201-Swapfiets_logos_RGB_Blue-1c3aa0-large-1593634730.png"
+        "img_link": "https://theme.zdassets.com/theme_assets/1869533/0b7f743e23e7ef51af79aeb2eda96b4f8cc74eb5.png"
     }
 ]

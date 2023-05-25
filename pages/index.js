@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 export default function Home() {
   const [data, setData] = useState(importedData);
-  const [selected, setSelected] = useState([]);
+  const [selected, setSelected] = useState(["Spotify"]);
 
   const currentTotal = selected.reduce((acc, curr) => {
     const subscription = data.find(item => item.name === curr);
@@ -25,24 +25,26 @@ export default function Home() {
         </h1>
 
         <div className='container mx-auto'>
-          <div className='flex flex-wrap'>
+          <div className='flex flex-wrap justify-center'>
           {data.map( (subscription, index) => (
-            <div className={`flex flex-col w-1/4 h-32 m-4
-                  p-2 ${selected.includes(subscription.name) ? 'bg-blue-300' : 'bg-white'}
-                  items-center justify-between border`}
-                  onClick={() => {
-                    if (selected.includes(subscription.name)) {
-                      setSelected(selected.filter(item => item !== subscription.name))
-                    } else {
-                      setSelected([...selected, subscription.name])
-                    }
-                  }}
+            <div className={`flex flex-col items-center justify-between
+                  rounded border p-2 w-64 h-40 m-4 outline outline-1 
+                  ${selected.includes(subscription.name) ? 'outline-4 outline-blue-500' : 'outline-gray-400'}
+                   `}
               key={index}>
-              <h2 className='text-xl'>{subscription.name}</h2>
-              <div className='w-12'>
-                <img src={subscription.img_link} alt={subscription.name} />
+                <div className='w-100 h-full p-2 flex flex-col cursor-pointer items-center justify-between'
+                onClick={() => {
+                  if (selected.includes(subscription.name)) {
+                    setSelected(selected.filter(item => item !== subscription.name))
+                  } else {
+                    setSelected([...selected, subscription.name])
+                  }
+                }}>
+                  <h2 className='text-xl'>{subscription.name}</h2>
+                  <div className=''>
+                    <img className='object-contain'  width={120} height={30} src={subscription.img_link} alt={subscription.name} />
+                  </div>
               </div>
-
               <p>{subscription.std_price}</p>
 
             </div>)
@@ -51,12 +53,12 @@ export default function Home() {
           </div>
 
           <div className='text-xl'>
-            Total: {currentTotal}
+            Total: &euro;{currentTotal.toFixed(2)}
           </div>
-        
       </main>
 
       <Footer/>
+
     </div>
   )
 }
