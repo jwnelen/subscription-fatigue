@@ -3,7 +3,7 @@
 const Footer = () => {
     const year = new Date().getFullYear();
     return (
-        <footer class="fixed p-1 w-full bottom-0 bg-gray-100 text-center">
+        <footer className="fixed p-1 w-full bottom-0 bg-gray-100 text-center">
             {year} &copy; The subscription Fatigue is real
             </footer>
     );

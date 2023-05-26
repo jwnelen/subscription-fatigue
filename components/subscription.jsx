@@ -20,8 +20,8 @@ const Subscription = ({
             {/* <div className=''>
                 <img className='object-contain' height={10} width={100} src={subscription.img_link} alt={subscription.name} />
             </div> */}
-            <input value={subscription.std_price}
-                    onChange={(e) => changePrice(e.target.value)}></input>
+            {/* <input value={subscription.std_price} */}
+                    {/* onChange={(e) => changePrice(e.target.value)}></input> */}
         <p>{subscription.std_price}</p>
     </div>
     )

@@ -28,31 +28,33 @@ export default function Home() {
           The Subscription Fatigue 
         </h1>
 
+        
         <div className='container mx-auto'>
           {data.map((category, index) => {
             return (
-              <div>
-            <h1 className='text-xl text-left'>{category.category}</h1>
-            
-            {category.items?.map((subscription, index) => {
-              const s = selected.includes(subscription.name)
-              return (
-              <Subscription
-                subscription={subscription}
-                index={index}
-                selected={s}
-                changePrice={(e) => {
-                  console.log(e)}
-                }
-                onClick={() => {
-                  if (s) {
-                    setSelected(selected.filter(item => item !== subscription.name))
-                    } else {
-                    setSelected([...selected, subscription.name])
+              <div key={`s-${index}`}>
+                <h1 className='text-xl text-left'>{category.category}</h1>
+                <div>
+                {category.items?.map((subscription, index) => {
+                  const s = selected.includes(subscription.name)
+                  return (
+                  <Subscription
+                    subscription={subscription}
+                    index={index}
+                    selected={s}
+                    changePrice={(e) => {
+                      console.log(e)}
                     }
-                }}
-                />)
-            })}
+                    onClick={() => {
+                      if (s) {
+                        setSelected(selected.filter(item => item !== subscription.name))
+                        } else {
+                        setSelected([...selected, subscription.name])
+                        }
+                    }}
+                    />)
+                })}
+                </div>
             </div>
             )})
             }
@@ -63,7 +65,6 @@ export default function Home() {
       </main>
 
       <Footer/>
-
     </div>
   )
 }
