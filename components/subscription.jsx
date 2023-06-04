@@ -9,7 +9,7 @@ const Subscription = ({
 ) => {
     return (
     <div className={`flex flex-row m-4 justify-between outline p-2 pl-4 rounded
-            ${selected ? 'outline-4 outline-blue-500' : 'outline-gray-100'}`}>
+            ${selected ? 'outline-4 outline-blue-900' : 'outline-gray-100'}`}>
         <div className={`
             cursor-pointer flex-1 flex flew-row justify-between items-center
             
