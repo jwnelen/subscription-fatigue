@@ -8,10 +8,8 @@ import DisplayTotal from '../components/totalDisplay';
 export default function Home() {
   const [data, setData] = useState(importedData);
   const [selected, setSelected] = useState(["Spotify"]);
-  // const currentTotal = 0
   const l = data.map(x => x.items)
   const fl = l.flat()
-  // console.log(l.flat())
   const currentTotal = selected.reduce((acc, curr) => {
     const subscription = fl.find(item => item.name === curr);
     return acc + ( isNaN(subscription.std_price) ? 0 : subscription.std_price);
