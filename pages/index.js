@@ -51,28 +51,16 @@ export default function Home() {
 
       <main className="text-center">
         <h1 className="text-3xl my-10">The Subscription Fatigue</h1>
-
         <div className="container mx-auto h-full mb-20">
           {categories.map((category, index) => {
             return (
               <div key={`s-${index}`}>
                 <div className="flex flex-row gap-3 justify-center">
-                  <h1 className="text-xl font-bold text-center">
+                  <h1 className="text-2xl font-bold text-center p-2">
                     {category.name}
                   </h1>
-                  <button onClickCapture={(e) => addSubscription(category.id)}>
-                    <svg
-                      className="w-6 h-6 text-green-500 dark:text-white"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M9.546.5a9.5 9.5 0 1 0 9.5 9.5 9.51 9.51 0 0 0-9.5-9.5ZM13.788 11h-3.242v3.242a1 1 0 1 1-2 0V11H5.304a1 1 0 0 1 0-2h3.242V5.758a1 1 0 0 1 2 0V9h3.242a1 1 0 1 1 0 2Z" />
-                    </svg>
-                  </button>
                 </div>
-                <div>
+                <div className="flex flex-col items-center gap-2 lg:w-1/2 mx-auto">
                   {data
                     .filter((x) => x.category === category.id)
                     .map((subscription, index) => {
@@ -101,13 +89,30 @@ export default function Home() {
                         />
                       );
                     })}
+                  <div className="border solid bg-gray-50 rounded w-full flex justify-center p-2 mb-4">
+                    <button
+                      className=""
+                      onClickCapture={(e) => addSubscription(category.id)}
+                    >
+                      <svg
+                        className="w-8 h-8 text-green-400 dark:text-white"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M9.546.5a9.5 9.5 0 1 0 9.5 9.5 9.51 9.51 0 0 0-9.5-9.5ZM13.788 11h-3.242v3.242a1 1 0 1 1-2 0V11H5.304a1 1 0 0 1 0-2h3.242V5.758a1 1 0 0 1 2 0V9h3.242a1 1 0 1 1 0 2Z" />
+                      </svg>
+                      <div className="w-8"></div>
+                    </button>
+                  </div>
                 </div>
               </div>
             );
           })}
-          <div className="mt-20 mb-32 flex justify-center">
+          <div className="mt-10 mb-32 flex justify-center">
             <Button
-              className="text-xl p-2 bg-blue-500 rounded"
+              className="text-xl p-2 bg-green-500 rounded"
               onClick={() => addCategory()}
             >
               Add new category

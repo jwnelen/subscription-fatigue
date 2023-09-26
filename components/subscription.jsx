@@ -4,8 +4,8 @@ const Subscription = ({
   deleteSubscription,
 }) => {
   return (
-    <div className="flex flex-row m-4 justify-center gap-4">
-      <div className={`flex flex-row w-1/2 p-2 pl-4 border solid rounded`}>
+    <div className="flex flex-row justify-center gap-4 w-full">
+      <div className={`flex flex-row w-full p-2 pl-4 border solid rounded`}>
         <div
           className={`flex-1 flex flew-row justify-between items-center`}
           key={`SUB-index`}
