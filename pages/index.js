@@ -55,10 +55,26 @@ export default function Home() {
           {categories.map((category, index) => {
             return (
               <div key={`s-${index}`}>
-                <div className="flex flex-row gap-3 justify-center">
-                  <h1 className="text-2xl font-bold text-center p-2">
-                    {category.name}
-                  </h1>
+                <div className="flex flex-row gap-3 justify-center lg:w-1/2 mx-auto">
+                  <input
+                    className="text-2xl font-bold text-center p-2 w-full"
+                    value={category.name}
+                    onChange={(e) => {
+                      setCategories((c) => {
+                        const newCategories = c.map((item) => {
+                          if (item.id === category.id) {
+                            return {
+                              ...item,
+                              name: e.target.value,
+                            };
+                          } else {
+                            return item;
+                          }
+                        });
+                        return newCategoriess;
+                      });
+                    }}
+                  ></input>
                 </div>
                 <div className="flex flex-col items-center gap-2 lg:w-1/2 mx-auto">
                   {data

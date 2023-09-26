@@ -3,63 +3,66 @@
     "name": "Netflix",
     "std_price": 9.99,
     "id": "1",
-    "category": "1",
-    "img_link": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2000px-Netflix_2015_logo.svg.png"
+    "category": "1"
   },
   {
     "name": "HBO",
     "std_price": 15.99,
     "id": "2",
-    "category": "1",
-    "img_link": "https://logos-world.net/wp-content/uploads/2022/01/HBO-Max-Logo.png"
+    "category": "1"
   },
   {
     "name": "Amazon Prime",
     "std_price": 12.99,
     "id": "3",
-    "category": "1",
-    "img_link": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Amazon_Prime_Video_logo.svg/2560px-Amazon_Prime_Video_logo.svg.png"
+    "category": "1"
   },
   {
     "name": "Disney+",
     "std_price": 7.99,
     "id": "4",
-    "category": "1",
-    "img_link": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Disney%2B_logo.svg/2560px-Disney%2B_logo.svg.png"
+    "category": "1"
   },
   {
     "name": "Hulu",
     "std_price": 11.99,
     "id": "5",
-    "category": "1",
-    "img_link": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Hulu_Logo.svg/2000px-Hulu_Logo.svg.png"
+    "category": "1"
   },
   {
     "name": "Apple TV+",
     "std_price": 4.99,
     "id": "6",
-    "category": "1",
-    "img_link": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Apple_TV_Plus_Logo.svg/2560px-Apple_TV_Plus_Logo.svg.png"
+    "category": "1"
   },
   {
     "name": "Spotify",
     "std_price": 9.99,
     "id": "7",
-    "category": "2",
-    "img_link": "https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_Green.png"
+    "category": "2"
   },
   {
-    "name": "NRC",
+    "name": "Dev.to",
     "std_price": 9.99,
     "id": "8",
-    "category": "3",
-    "img_link": "https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_Green.png"
+    "category": "3"
   },
   {
-    "name": "Swapfiets",
-    "std_price": 18.5,
+    "name": "Medium",
+    "std_price": 5.99,
     "id": "9",
-    "category": "4",
-    "img_link": "https://theme.zdassets.com/theme_assets/1869533/0b7f743e23e7ef51af79aeb2eda96b4f8cc74eb5.png"
+    "category": "3"
+  },
+  {
+    "name": "NS",
+    "std_price": 26.5,
+    "id": "10",
+    "category": "4"
+  },
+  {
+    "name": "Adobe Creative Cloud",
+    "std_price": 52.99,
+    "id": "10",
+    "category": "5"
   }
 ]
