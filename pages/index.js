@@ -1,17 +1,19 @@
+import { useState } from "react";
+
 import Head from "next/head";
 import importedData from "../data/subscriptions.json";
+import importedCategories from "../data/categories.json";
+
 import Footer from "../components/footer";
 import Subscription from "../components/subscription";
-import { useState } from "react";
 import DisplayTotal from "../components/totalDisplay";
+
 import { Button } from "flowbite-react";
 import { v4 as uuidv4 } from "uuid";
 
 export default function Home() {
   const [data, setData] = useState(importedData);
-
-  const categories = data.map((x) => x.category);
-  let uniqueCategories = [...new Set(categories)];
+  const [categories, setCategories] = useState(importedCategories);
 
   const currentTotal = data.reduce((acc, curr) => {
     const subscription = data.find((item) => item.id === curr.id);
@@ -19,13 +21,11 @@ export default function Home() {
   }, 0);
 
   const addCategory = () => {
-    setData((d) => [
-      ...d,
+    setCategories((c) => [
+      ...c,
       {
-        category: "New category",
-        name: "New subscription",
-        std_price: 0,
         id: uuidv4(),
+        name: "New category",
       },
     ]);
   };
@@ -53,12 +53,14 @@ export default function Home() {
         <h1 className="text-3xl my-10">The Subscription Fatigue</h1>
 
         <div className="container mx-auto h-full mb-20">
-          {uniqueCategories.map((category, index) => {
+          {categories.map((category, index) => {
             return (
               <div key={`s-${index}`}>
                 <div className="flex flex-row gap-3 justify-center">
-                  <h1 className="text-xl font-bold text-center">{category}</h1>
-                  <Button onClickCapture={(e) => addSubscription(category)}>
+                  <h1 className="text-xl font-bold text-center">
+                    {category.name}
+                  </h1>
+                  <button onClickCapture={(e) => addSubscription(category.id)}>
                     <svg
                       className="w-6 h-6 text-green-500 dark:text-white"
                       aria-hidden="true"
@@ -68,11 +70,11 @@ export default function Home() {
                     >
                       <path d="M9.546.5a9.5 9.5 0 1 0 9.5 9.5 9.51 9.51 0 0 0-9.5-9.5ZM13.788 11h-3.242v3.242a1 1 0 1 1-2 0V11H5.304a1 1 0 0 1 0-2h3.242V5.758a1 1 0 0 1 2 0V9h3.242a1 1 0 1 1 0 2Z" />
                     </svg>
-                  </Button>
+                  </button>
                 </div>
                 <div>
                   {data
-                    .filter((x) => x.category === category)
+                    .filter((x) => x.category === category.id)
                     .map((subscription, index) => {
                       return (
                         <Subscription
@@ -108,7 +110,7 @@ export default function Home() {
               className="text-xl p-2 bg-blue-500 rounded"
               onClick={() => addCategory()}
             >
-              Add new subscription
+              Add new category
             </Button>
             <br></br>
           </div>

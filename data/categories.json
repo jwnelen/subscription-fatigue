@@ -1,0 +1,18 @@
+[
+  {
+    "id": "1",
+    "name": "Video Streaming Services"
+  },
+  {
+    "id": "2",
+    "name": "Audio Streaming Services"
+  },
+  {
+    "id": "3",
+    "name": "News"
+  },
+  {
+    "id": "4",
+    "name": "Transport"
+  }
+]
