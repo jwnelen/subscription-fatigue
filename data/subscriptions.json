@@ -1,57 +1,58 @@
 [
-    {
-        "category": "Video Streaming Services",
-        "items": [
-            {
-                "name": "Netflix",
-                "std_price": 9.99,
-                "img_link": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2000px-Netflix_2015_logo.svg.png"
-            },
-            {
-                "name": "HBO",
-                "std_price": 15.99,
-                "img_link": "https://logos-world.net/wp-content/uploads/2022/01/HBO-Max-Logo.png"
-            }, 
-            {
-                "name": "Amazon Prime",
-                "std_price": 12.99,
-                "img_link": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Amazon_Prime_Video_logo.svg/2560px-Amazon_Prime_Video_logo.svg.png"
-            },
-            {
-                "name": "Disney+",
-                "std_price": 7.99,
-                "img_link": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Disney%2B_logo.svg/2560px-Disney%2B_logo.svg.png"
-            },
-            {
-                "name": "Hulu",
-                "std_price": 11.99,
-                "img_link": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Hulu_Logo.svg/2000px-Hulu_Logo.svg.png"
-            },
-            {
-                "name": "Apple TV+",
-                "std_price": 4.99,
-                "img_link": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Apple_TV_Plus_Logo.svg/2560px-Apple_TV_Plus_Logo.svg.png"
-            }
-        ]
-    },
-    {
-        "category": "Audio Streaming Services",
-        "items": [
-            {
-                "name": "Spotify",
-                "std_price": 9.99,
-                "img_link": "https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_Green.png"
-            }
-        ]
-    },
-    {
-        "category": "Transport",
-        "items": [
-            {
-                "name": "Swapfiets",
-                "std_price": 18.50,
-                "img_link": "https://theme.zdassets.com/theme_assets/1869533/0b7f743e23e7ef51af79aeb2eda96b4f8cc74eb5.png"
-            }
-        ]
-    }
+  {
+    "name": "Netflix",
+    "std_price": 9.99,
+    "id": "1",
+    "category": "Video Streaming Services",
+    "img_link": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2000px-Netflix_2015_logo.svg.png"
+  },
+  {
+    "name": "HBO",
+    "std_price": 15.99,
+    "id": "2",
+    "category": "Video Streaming Services",
+    "img_link": "https://logos-world.net/wp-content/uploads/2022/01/HBO-Max-Logo.png"
+  },
+  {
+    "name": "Amazon Prime",
+    "std_price": 12.99,
+    "id": "3",
+    "category": "Video Streaming Services",
+    "img_link": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Amazon_Prime_Video_logo.svg/2560px-Amazon_Prime_Video_logo.svg.png"
+  },
+  {
+    "name": "Disney+",
+    "std_price": 7.99,
+    "id": "4",
+    "category": "Video Streaming Services",
+    "img_link": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Disney%2B_logo.svg/2560px-Disney%2B_logo.svg.png"
+  },
+  {
+    "name": "Hulu",
+    "std_price": 11.99,
+    "id": "5",
+    "category": "Video Streaming Services",
+    "img_link": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Hulu_Logo.svg/2000px-Hulu_Logo.svg.png"
+  },
+  {
+    "name": "Apple TV+",
+    "std_price": 4.99,
+    "id": "6",
+    "category": "Video Streaming Services",
+    "img_link": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Apple_TV_Plus_Logo.svg/2560px-Apple_TV_Plus_Logo.svg.png"
+  },
+  {
+    "name": "Spotify",
+    "std_price": 9.99,
+    "id": "7",
+    "category": "Audio Streaming Services",
+    "img_link": "https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_Green.png"
+  },
+  {
+    "name": "Swapfiets",
+    "std_price": 18.5,
+    "id": "8",
+    "category": "Transport",
+    "img_link": "https://theme.zdassets.com/theme_assets/1869533/0b7f743e23e7ef51af79aeb2eda96b4f8cc74eb5.png"
+  }
 ]
