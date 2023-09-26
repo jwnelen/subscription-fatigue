@@ -76,7 +76,7 @@ export default function Home() {
                     }}
                   ></input>
                 </div>
-                <div className="flex flex-col items-center gap-2 lg:w-1/2 mx-auto">
+                <div className="flex flex-col items-center gap-2 w-2/3 lg:w-1/2 mx-auto">
                   {data
                     .filter((x) => x.category === category.id)
                     .map((subscription, index) => {
@@ -107,7 +107,7 @@ export default function Home() {
                     })}
                   <div className="border solid bg-gray-50 rounded w-full flex justify-center p-2 mb-4">
                     <button
-                      className=""
+                      className=""  
                       onClickCapture={(e) => addSubscription(category.id)}
                     >
                       <svg
@@ -119,7 +119,6 @@ export default function Home() {
                       >
                         <path d="M9.546.5a9.5 9.5 0 1 0 9.5 9.5 9.51 9.51 0 0 0-9.5-9.5ZM13.788 11h-3.242v3.242a1 1 0 1 1-2 0V11H5.304a1 1 0 0 1 0-2h3.242V5.758a1 1 0 0 1 2 0V9h3.242a1 1 0 1 1 0 2Z" />
                       </svg>
-                      <div className="w-8"></div>
                     </button>
                   </div>
                 </div>

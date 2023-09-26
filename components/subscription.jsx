@@ -4,24 +4,21 @@ const Subscription = ({
   deleteSubscription,
 }) => {
   return (
-    <div className="flex flex-row justify-center gap-4 w-full">
-      <div className={`flex flex-row w-full p-2 pl-4 border solid rounded`}>
-        <div
-          className={`flex-1 flex flew-row justify-between items-center`}
-          key={`SUB-index`}
-        >
-          <input
-            className="text-xl"
-            value={subscription.name}
-            onChange={(e) => {
-              setSubscription({ ...subscription, name: e.target.value });
-            }}
-          ></input>
-        </div>
+    // <div className="border solid bg-gray-50 rounded w-full flex justify-center p-2 mb-4">
+
+    <div className="flex flex-row justify-center w-full md:gap-2">
+      <div className={`flex flex-row border solid rounded flex-grow`}>
+        <input
+          className="text-xl flex-grow px-2"
+          value={subscription.name}
+          onChange={(e) => {
+            setSubscription({ ...subscription, name: e.target.value });
+          }}
+        ></input>
         <input
           value={subscription.std_price}
           type="number"
-          className="border-0 rounded p-1 w-24 text-right text-lg"
+          className="border-0 rounded p-1 w-20 text-right text-lg"
           onChange={(e) => {
             let price = 0;
             try {
