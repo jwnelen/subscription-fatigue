@@ -57,7 +57,6 @@ export default function Home() {
                           index={index}
                           key={`s-${index}`}
                           deleteSubscription={() => {
-                            g;
                             setData((d) =>
                               d.filter((item) => item.id !== subscription.id)
                             );
