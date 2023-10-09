@@ -20,6 +20,11 @@ export default function Home() {
     return acc + (isNaN(subscription.std_price) ? 0 : subscription.std_price);
   }, 0);
 
+  const restoreDefaults = () => {
+    setData(importedData);
+    setCategories(importedCategories);
+  };
+
   const addCategory = () => {
     setCategories((c) => [
       ...c,
@@ -49,8 +54,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="text-center">
+      <main className="text-center flex justify-center flex-col items-center">
         <h1 className="text-3xl my-10">The Subscription Fatigue</h1>
+
         <div className="container mx-auto h-full mb-20">
           {categories.map((category, index) => {
             return (
@@ -107,7 +113,7 @@ export default function Home() {
                     })}
                   <div className="border solid bg-gray-50 rounded w-full flex justify-center p-2 mb-4">
                     <button
-                      className=""  
+                      className=""
                       onClickCapture={(e) => addSubscription(category.id)}
                     >
                       <svg
@@ -125,14 +131,36 @@ export default function Home() {
               </div>
             );
           })}
-          <div className="mt-10 mb-32 flex justify-center">
+          <div className="mt-10 mb-32 flex justify-center gap-4">
             <Button
-              className="text-xl p-2 bg-green-500 rounded"
+              className="text-xl bg-green-500 rounded"
               onClick={() => addCategory()}
             >
               Add new category
             </Button>
-            <br></br>
+            <Button
+              className="px-4 rounded w-fit text-black hover:border-black bg-gray-200"
+              onClick={restoreDefaults}
+            >
+              Restore Defaults
+              {/* <svg
+                className="w-6 h-6 ml-4 text-gray-600 dark:text-white"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 16 14"
+                // flip it horizontally
+                style={{ transform: "scaleX(-1)" }}
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="m12 7 3-3-3-3m0 12H5.5a4.5 4.5 0 1 1 0-9H14"
+                />
+              </svg> */}
+            </Button>
           </div>
         </div>
 
